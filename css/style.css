@@ -1,0 +1,208 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+main {
+    position: relative; 
+    padding: 50px 0;
+}
+img {
+    border-radius: 50% ;
+}
+p {
+    font-size: .8em;
+    margin: 5px 0;
+}
+
+/* Main Container */
+.wrapper {
+    width: 100%;
+    margin: 50px 10px;
+}
+
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 100%;
+}
+.header h1 {
+    font-size: .8em;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+
+/* Search Styles */
+#search {
+    margin-bottom: 10px;
+ }
+#searchInput{
+    padding: 0 10px;
+    font-size: 1.2em;
+}
+#searchBtn{
+    font-size: 1.1em;
+}
+
+
+/* Employee Styles */
+#employeeList {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-gap: 10px;
+    width: 100%;
+}
+.employeeDetails {
+    margin-left: 10px;
+}
+.employee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    width: 250px;
+    margin: 0 auto;
+}
+
+
+/* Overlay Styles */
+.overlay {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+.employeeDetailsOverlay {
+    background-color: white;
+    padding: 10px;
+    min-width: 250px;
+    min-height: 250px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.employeeOtherDetailsOverlay {
+    border-top: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;  
+}
+#close {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+}
+
+/* Overlay Button Styles */
+#overlayBtn {
+    min-width: 250px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn {
+    text-transform: uppercase;
+    background-color: lightslategray;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    color: white;
+    transition: background-color .3s ease-out;
+}
+.btn:hover{
+    background-color: black;
+}
+
+/* Add Styles on Javascript*/
+.d-none {
+    display: none;
+}
+
+/* Media Query For Tablets */
+@media (min-width:768px){
+    /* Global Style */
+    p {
+        font-size: 1.2em;
+    }
+
+    /* Header Styles */
+    .header {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+    .header h1 {
+        font-size: 1.3em;
+        margin: 0;
+    }
+    #search {
+        margin-bottom: 0px;
+    }
+
+    /* Employee Styles */
+    #employeeList {
+        grid-template-columns: repeat(2,1fr) ;
+        margin-top: 100px;
+    }
+    .employee {
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        flex-direction: row;
+        width: 300px;
+        margin: 0 auto;
+    }
+   
+    /* Overlay Styles */
+    #overlayBtn {
+        min-width: 400px;
+    }
+    .employeeDetailsOverlay {
+        min-width: 400px;
+        min-height: 400px;
+    }
+    
+}
+
+/* Media Query For Desktop */
+@media (min-width:1268px){
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 30px;
+        margin: 20px auto;
+        width: 80%;
+    }
+    #employeeList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .employee {
+        width: 400px;
+        margin: 0 auto;
+    }
+}  
